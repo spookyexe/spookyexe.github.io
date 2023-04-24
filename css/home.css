@@ -10,6 +10,7 @@
 
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .flex {
@@ -22,4 +23,10 @@ body {
     width: auto;
     
     background-color: #252525;
+}
+
+@media (max-width: 35em) {
+    body {
+        overflow-y: auto;
+    }
 }

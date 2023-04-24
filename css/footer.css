@@ -1,5 +1,5 @@
 .footer {
-    min-height: 15vh;
+    min-height: 20vh;
     width: auto;
 
     background-color: black;
@@ -108,12 +108,12 @@
 }
 
 .copyright-title {
-    font-weight: bolder;
+    font-weight: 900;
     font-size: 20px;
 }
 
 .copyright {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
 }
 

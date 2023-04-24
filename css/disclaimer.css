@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 .disclaimer {
-    display: block;
-
     align-items: center;
     justify-content: center;
     margin: auto;
     text-align: center;
 
     padding: 10px;
+
 }
 
 .disclaimer a {
@@ -24,6 +23,28 @@
 }
 
 .exit-disclaimer {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    top: 0.5rem;
+    right: 0.1rem;
+    
+    width: 2rem;
+    aspect-ratio: 1;
+
+    background-image: url("/assets/nav-bar/nav-mobile-close.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    border: 0;
+    background-color: transparent;
+}
+
+.exit-disclaimer:hover {
+    filter: invert(50%);
+    cursor: pointer;
+}
+
+.disclaimer[data-visible="false"] {
     display: none;
 }
 
@@ -39,29 +60,4 @@
         padding-top: 10px;
     }
 
-    .exit-disclaimer {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        top: 0.5rem;
-        right: 0.1rem;
-        
-        width: 2rem;
-        aspect-ratio: 1;
-
-        background-image: url("/assets/nav-bar/nav-mobile-close.png");
-        background-repeat: no-repeat;
-        background-size: 20px;
-        border: 0;
-        background-color: transparent;
-    }
-
-    .exit-disclaimer:hover {
-        filter: invert(50%);
-        cursor: pointer;
-    }
-
-    .disclaimer[data-visible="false"] {
-        display: none;
-    }
 }

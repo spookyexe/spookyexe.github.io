@@ -6,5 +6,6 @@ exitDisclaimer.addEventListener('click', () => {
 
     if (visibility === "true") {
         disclaimer.setAttribute('data-visible', false);
+
     }
 })
