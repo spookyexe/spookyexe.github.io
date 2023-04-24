@@ -10,6 +10,7 @@
 
 body {
     overflow-x: hidden;
+
 }
 
 .flex {
@@ -18,8 +19,25 @@ body {
 }
 
 .main {
-    min-height: 77vh;
+    min-height: 80vh;
     width: auto;
-    
     background-color: #252525;
+
+    padding-top: 20vh;
+}
+
+.main .container {
+    border: white solid 2px;
+    max-width: min();
+    min-height: 40vh;
+    
+    display: block;
+    margin: auto;
+}
+
+.footer {
+    min-height: 15vh;
+    width: auto;
+
+    background-color: black;
 }
