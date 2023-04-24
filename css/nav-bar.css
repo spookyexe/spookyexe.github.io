@@ -45,6 +45,18 @@
     display: none;
 }
 
+.start-button {
+    border: none;
+    background-color: rgb(139, 177, 186);
+
+    border-radius: 10px;
+    padding: 6px;
+
+    margin-left: 30px;
+
+    transition: all 0.3s ease 0s;
+}
+
 .sign-in-button {
     border: none;
     background-color: rgb(0, 136, 169);
@@ -52,7 +64,6 @@
     border-radius: 10px;
     padding: 6px;
 
-    margin-left: 30px;
 
     transition: all 0.3s ease 0s;
 }
@@ -65,6 +76,11 @@
 
 .nav-bar .sign-in-button:hover {
     background-color: rgba(0, 136, 169, 0.8);
+    color: white;
+}
+
+.nav-bar .start-button:hover {
+    background-color: rgba(139, 177, 186, 0.8);
     color: white;
 }
 
@@ -124,7 +140,7 @@
         filter: invert(70%);
     }
 
-    .sign-in-button {
+    .start-button {
         margin: 0;
     }
 }
