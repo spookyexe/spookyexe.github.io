@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+@font-face {
+    font-family: pixel_title;
+    src: url('../assets/fonts/pixel_title.TTF');
+  }
+
+
+* {
+    transition-property: color, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+html {
+    cursor: url('../assets/images/cursor.png'), auto;
+
+}
+
+body {
+    background-image: url('../assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: #4193E2;
+
+}
+
+.text {
+    font-family: pixel_title;
+    color: #345A44;
+
+    position: absolute;
+
+    top: 400px;
+    right: 300px;
+
+    width: 750px;
+
+    font-size: 60px;
+    text-align: center;
+
+}
+
+img {
+    position: absolute;
+
+    top: 500px;
+    right: 570px;
+}
+
+p {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 50px;
+    color: #345A44;
+
+    position: absolute;
+
+    top: 680px;
+    right: 500px;
+}
