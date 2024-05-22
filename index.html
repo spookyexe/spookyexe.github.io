@@ -4,35 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello!</title>
+    <title>QR-AMS | LOGIN</title>
 
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/glass.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
+
 </head>
 
 <body>
-
-    <div class="main-container">
-        <div id="text" class="text">
-            HELLO HONEYY WASSUP WASSUP
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <a href="https://web.facebook.com/pagsci" target="_blank"><img src="../assets/images/PAGSCI.png" alt="pagsci logo"></a>
+            </div>
+            <div class="school-name">
+                PAGADIAN CITY SCIENCE HIGH SCHOOL
+                <div class="school-address">
+                    NATIONAL HIGHWAY, TUBURAN DISTRICT, PAGADIAN CITY
+                </div>
+            </div>
         </div>
-
-        <div id="noHello" class="no-hello button">
-            NOT HELLO!
+        <div class="navbar-right">
+            <ul>
+                <li><a href="pages/about.html">ABOUT</a></li>
+            </ul>
         </div>
+    </nav>
 
+    <div class="main-container glass">
+        <div class="image-container"></div>
 
-        <a href="page2.html"><div id="helloButton" class="button">
-            HELLO!
-        </div></a>
-
-        <p id="errorText"></p>
-
-        <img id="bunny" src="./assets/GIFs/1.gif" alt="">
+        <div class="login-container">
+            <div class="header">
+                <h1>QR-AMS</h1>
+                <p>QR-CODE ATTENDANCE MONITORING SYSTEM</p>
+            </div>
+            <form action="" method="post" onsubmit="handleSubmit(event)">
+                <div role="alert">
+                    <p id="alert"><?= $error ?></p>
+                </div>
+                <input placeholder="Email..." type="email" name="email" value="" aria-describedby="emailHelp">
+                <input placeholder="Password..." type="password" name="password" id="passwordInput">
+                <div id="show_password">
+                    <input type="checkbox" onclick="myFunction()">
+                    <p>Show Password</p>
+                </div>
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
     </div>
 
-    <script src="./scripts/index.js"></script>
+    <div class="footer">
+        <img src="../assets/images/gg.png" alt="gian.gg logo">
+        <hr id="vertical-hr">
+        <a href="https://github.com/spookyexe" target="_blank">© GIAN EPANTO, 2024</a>
 
+    </div>
 
+    <p id="disclaimer">This is a Dummy Website, used for showcasing the landing page of QR-AMS. Join the Research Summit and find our Stand! <a href="pages/about.html">Learn more</a></p>
+
+    <script src="../assets/js/show_password.js"></script>
+    <script src="../assets/js/submit.js"></script>
 </body>
 
 </html>

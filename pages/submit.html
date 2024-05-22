@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-AMS | <?= $_SESSION['user_gradeLevel'] ?> <?= strtoupper($_SESSION['user_section']) ?></title>
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+
+    <link rel="stylesheet" href="../assets/css/submit.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/glass.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <h1>12 - GEMINI ATTENDANCE</h1>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li><a href="../index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main-container glass">
+        <div class="container1">
+            <div class="greetings">
+                <h1>Good Day, Vistor!
+                    <p id="dateTime"></p>
+            </div>
+            <div class="buttons">
+                <ul>
+                    <button name="sf2">SF2</button>
+
+                    <li><button onclick="refreshPage()"><img src="../assets/images/refresh.svg" alt=""></button></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="container2">
+            <p id="alert">Total Present: 3 | Total Students: 3</p>
+            <div class="male-table">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time 1</th>
+                        <th>Time 2</th>
+                        <th>Time 3</th>
+                        <th>Time 4</th>
+                    </tr>
+                    <tr>
+                        <td>Epanto, Geri Gian, Canoy</td>
+                        <td>06:50:00</td>
+                        <td>12:15:00</td>
+                        <td>13:05:00</td>
+                        <td>17:10:00</td>
+                    </tr>
+                    <tr>
+                        <td>Torres, Mharniel Jay, Tagactac</td>
+                        <td class="late">07:30:00</td>
+                        <td>12:10:00</td>
+                        <td class="late">13:20:00</td>
+                        <td>16:30:00</td>
+                    </tr>
+                    
+                </table>
+            </div>
+            <div class="female-table">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time 1</th>
+                        <th>Time 2</th>
+                        <th>Time 3</th>
+                        <th>Time 4</th>
+                    </tr>
+                    <tr>
+                        <td>Balajula, Abigail Ruzel, Salvacion</td>
+                        <td>06:20:00</td>
+                        <td>12:05:00</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="footer">
+        <img src="../assets/images/gg.png" alt="gian.gg logo">
+        <hr id="vertical-hr">
+        <a href="https://github.com/spookyexe" target="_blank">© GIAN EPANTO, 2024</a>
+
+    </div>
+
+    <p id="disclaimer">This is a Dummy Website, used for showcasing the landing page of QR-AMS. Join the Research Summit and find our Stand! <a href="about.html">Learn more</a></p>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: 'numeric', minute: 'numeric', hour12: true };
+            const date = now.toLocaleDateString('en-US', dateOptions);
+            const time = now.toLocaleTimeString('en-US', timeOptions);
+            document.getElementById('dateTime').innerHTML = `${date} | ${time}`;
+        }
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to display the date and time immediately when the page loads
+        updateDateTime();
+    </script>
+
+</body>
+
+</html>
